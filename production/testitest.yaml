@@ -1,0 +1,26 @@
+apiVersion: devopstoolkit.live/v1alpha1
+kind: AppClaim
+metadata:
+  annotations:
+    terasky.backstage.io/source-info: >-
+      {"pushToGit":true,"gitBranch":"main","gitRepo":"github.com?owner=Wolfsrudel&repo=crossplane-backstage-test","gitLayout":"namespace-scoped","basePath":"production"}
+    terasky.backstage.io/add-to-catalog: 'true'
+    terasky.backstage.io/owner: group:default/default
+    terasky.backstage.io/system: production
+    terasky.backstage.io/source-file-url: >-
+      https://github.com/Wolfsrudel/crossplane-backstage-test/blob/main/production/testitest.yaml
+  name: testitest
+  namespace: production
+spec:
+  parameters:
+    ci:
+      enabled: false
+    repository:
+      enabled: false
+      name: Wolfsrudel/k8s-nix-nixidy-example
+    scaling:
+      enabled: false
+    image: ghcr.io/vfarcic/silly-demo
+    namespace: production
+    tag: 0.0.1
+  compositeDeletePolicy: Background
