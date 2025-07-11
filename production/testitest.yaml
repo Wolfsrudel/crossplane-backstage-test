@@ -17,10 +17,9 @@ spec:
       enabled: false
     repository:
       enabled: false
-      name: Wolfsrudel/k8s-nix-nixidy-example
     scaling:
       enabled: false
     image: ghcr.io/vfarcic/silly-demo
     namespace: production
-    tag: 0.0.1
+    tag: 0.0.2
   compositeDeletePolicy: Background
